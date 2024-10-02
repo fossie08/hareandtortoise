@@ -43,7 +43,7 @@ func startRace(hareSpeedLower, hareSpeedUpper, tortoiseSpeedLower, tortoiseSpeed
 
 		// Update the race progress in the GUI
 		resultLabel.SetText(fmt.Sprintf("Round %d\nTortoise: %d m\nHare: %d m\nHare nap desire: %d%%", i, tortoiseDistance, hareDistance, hareNapDesire))
-		time.Sleep(100 * time.Millisecond) // Pause to simulate time between rounds
+		time.Sleep(10 * time.Millisecond) // Pause to simulate time between rounds
 
 		if tortoiseDistance >= totalDistance || hareDistance >= totalDistance {
 			break
@@ -84,7 +84,7 @@ func main() {
 	tortoiseSpeedUpperLabel := widget.NewLabel("Tortoise Speed Upper: 10")
 
 	// Distance slider
-	distanceSlider := widget.NewSlider(500, 2000)
+	distanceSlider := widget.NewSlider(100, 10000)
 	distanceSlider.SetValue(1000)
 	distanceLabel := widget.NewLabel("Race Distance: 1000 m")
 
